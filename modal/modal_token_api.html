@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .pagina-imagen {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h5 class="color-titulo text-center">Creación de token y conexión</h5>
+        <!-- <p>Estás en la página {indiceActual} de la presentación.</p>-->
+
+        &nbsp;
+
+        <div class="container">
+            <!-- Primera fila con imagen y descripción -->
+            <div class="row pagina-imagen">
+                <div class="col-md-3">
+                    <p class="color-titulo"><strong>Administración</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-9">
+                    <ul>
+                        <li class="color-titulo">Debes hacer clic para acceder a los ajustes de la plataforma.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row pagina-imagen">
+                <div class="col-md-4">
+                    <input data-word-filter="" data-target-node=".opciones-administracion"
+                        data-target-text=".info-title" class="form-control" type="search" placeholder="Buscar"
+                        autocomplete="off" disabled>
+                </div>
+                <div class="col-md-6">
+                    <p class="color-titulo">Debes ingresar la palabra Accesos API para encontrar la configuración correcta.</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-3">
+                    <img src="img/logo_acceso_api.png" width="40"> Accesos API
+                </div>
+                <div class="col-md-6">
+                    <p class="color-titulo">Haz clic aquí para ingresar a la creación del token</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-3">
+                    <button class="btn btn-primary btn-md" data-modal="true" href="">
+                        Crear Nueva API Key 
+                    </button>
+                </div>
+                <div class="col-md-7">
+                    <p class="color-titulo">Clic aquí para que comencemos a crear el token.</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-10">
+                    <ul>
+                        <li class="color-titulo">En este punto, es momento de revisar cada uno de los permisos que requiera el endpoint que desees utilizar.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-2">
+                    <button class="btn btn-primary btn-md" data-modal="true" href="">Guardar</button>
+                </div>
+                <div class="col-md-9">
+                    <p class="color-titulo">Luego de configurar los permisos para los endpoint que utilizaremos, daremos clic en el botón guardar.</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-2">
+                    <img src="img/ojo_token.png" width="40">
+                </div>
+                <div class="col-md-9">
+                    <p class="color-titulo">Damos clic en el icono del ojo para que el token sea desbloqueado y poder copiarlo.</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-4">
+                <input type="text" id="miInput" value="">
+                </div>
+                <div class="col-md-8">
+                    <p class="color-titulo">Copiamos el texto y lo llevaremos a la pagina de apidocs. Ha esta pagina llegamos ingresando la palabra apidocs en la url del cliente ejemplo: demo.buk.cl/apidocs.</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-2">
+                    <button class="btn btn-primary btn-md" data-modal="true" href="">Autorizar</button>
+                </div>
+                <div class="col-md-9">
+                    <p class="color-titulo">Debemos hacer clic en Autorizar para que ingresemos nuestro token copiado anteriormente.</p>
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                        <li class="color-titulo">Debemos ver que el país este correcto</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-4">
+                    <input type="text" id="miInput" value="">
+                </div>
+                <div class="col-md-6">
+                    <p class="color-titulo">Pegamos nuestro token creado.</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-2">
+                    <button type="button" class="auth__button auth_submit__button" data-sw-translate="">Authorize</button>
+                </div>
+                <div class="col-md-6">
+                    <p class="color-titulo">Hacemos clic en Authorize</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-2">
+                    <button class="btn btn-primary btn-md" data-modal="true" href="">Autorizar</button>
+                </div>
+                <div class="col-md-9">
+                    <p class="color-titulo">Volvemos hacer clic en autorizar. Esto es para poder validar que figuremos logeados en apidocs.</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-9">
+                    <ul>
+                        <li class="color-titulo">Podemos ver que el bóton ya dice logout (cerrar sesión) y que en el campo value figura nuestro token.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-7">
+                    <p class="color-titulo">Si aún te encuentras con dudas, puedes escribirnos en nuestro canal de slack haciendo clic en el icono o también puedes revisar nuestra documentación en el logo de google drive</p>
+                </div>
+                <div class="col-md-2">
+                 <a href="https://drive.google.com/drive/folders/1hrm2aauHQuzvFKk85kxDhfVK_Blg5DS9?usp=sharing" target="_blank"><img src="img/logo_drive.png" width="80" height="70">
+                 </a>
+                </div>
+                <div class="col-md-3">
+                 <a href="https://bukhr.slack.com/archives/C02CDULLYN9" target="_blank"><img src="img/logo_slack.png" width="100" height="70">
+                 </a>
+                </div>
+               
+            </div>
+            <footer class="bg-light text-center py-3 mt-5 d-flex justify-content-center">
+                <img src="img/integraciones_by_buk.png" alt="Footer Image" height="100" class="mx-3"></img>
+            </footer>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

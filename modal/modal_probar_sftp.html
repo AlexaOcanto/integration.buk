@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .pagina-imagen {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h5 class="color-titulo text-center">Verificar envío centralización a SFTP</h5>
+        <!-- <p>Estás en la página {indiceActual} de la presentación.</p>-->
+
+        &nbsp;
+
+        <div class="container">
+            <!-- Primera fila con imagen y descripción -->
+            <div class="row pagina-imagen">
+                <div class="col-md-3">
+                    <p class="color-titulo"><strong>Administración</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-9">
+                    <ul>
+                        <li class="color-titulo">Debes hacer clic para acceder a los ajustes de la plataforma.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-4">
+                    <img src="img/logo_parametros_generales.png" width="40"> Parámetros Generales
+                </div>
+                <div class="col-md-6">
+                    <p class="color-titulo">Aquí encontraremos todas las configuraciones que nos entrega la plataforma.</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-2">
+                    <p class="color-titulo"><strong>Organización</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-9">
+                    <p class="color-titulo">Aquí debemos ir cerrando cada una de las configuraciones hasta encontrar <strong>Envío de Archivos de Contabilidad</strong>. También puede presionar las teclas (ctrl + f) en windows y en mac (command + f) para poder buscar Envío de Archivos de Contabilidad y llegar más rápido a la configuración</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <table class="table table-hover">
+                        <tr>
+                            <td class="color-titulo"><strong>URL del servidor de respaldo</strong></td>
+                            <td class="color-titulo">sftp://buksftp@18.228.40.92:998</td>
+                        </tr>
+                        <tr>
+                            <td class="color-titulo"><strong>Contraseña</strong></td>
+                            <td class="color-titulo">M2f4bc3WCjqaCL3r</td>
+                        </tr>
+                        <tr>
+                            <td class="color-titulo"><strong>Ruta de destino</strong></td>
+                            <td class="color-titulo">data/</td>
+                        </tr>
+                        <tr>
+                            <td class="color-titulo"><strong>Llave SSH</strong></td>
+                            <td class="color-titulo"></td>
+                        </tr>
+                        <tr>
+                            <td class="color-titulo"><strong>Guardar registro</strong></td>
+                            <td class="color-titulo">Desactivado</td>
+                        </tr>
+                </table>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-2">
+                    <button class="btn btn-primary btn-md" data-modal="true" href="">Guardar</button>
+                </div>
+                <div class="col-md-6">
+                    <p class="color-titulo">Luego de configurar cada uno de los campos solicitados, daremos clic en el botón guardar.</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-2">
+                    <img src="img/buk.png" width="60">
+                </div>
+                <div class="col-md-6">
+                    <p class="color-titulo">Damos clic en el logo de BUK.</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-2">
+                    <img src="img/filezilla_logo.png" width="60">
+                </div>
+                <div class="col-md-6">
+                    <p class="color-titulo">Abrimos la herramienta FileZilla</p>
+                </div>
+                <p class="color-titulo text-center"><strong>Configuración</strong></p>
+                <table class="table table-hover">
+                    <tr>
+                        <td class="color-titulo"><strong>Host</strong></td>
+                        <td class="color-titulo">sftp://18.228.40.92</td>
+                    </tr>
+                    <tr>
+                        <td class="color-titulo"><strong>Username</strong></td>
+                        <td class="color-titulo">buksftp</td>
+                    </tr>
+                    <tr>
+                        <td class="color-titulo"><strong>Password</strong></td>
+                        <td class="color-titulo">M2f4bc3WCjqaCL3r</td>
+                    </tr>
+                    <tr>
+                        <td class="color-titulo"><strong>Port</strong></td>
+                        <td class="color-titulo">998</td>
+                    </tr>
+            </table>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-10">
+                    <ul>
+                        <li class="color-titulo">Seleccionamos Quickconnect para poder conectarnos a nuestro servidor</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-10">
+                    <ul>
+                        <li class="color-titulo">Aquí confirmamos la conexión dando clic en ok.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-10">
+                    <ul>
+                        <li class="color-titulo">Aquí veremos el servidor, en este caso la carpeta data que es la carpeta que asignamos para guardar el registro.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-10">
+                    <ul>
+                        <li class="color-titulo">Volvemos BUK y seleccionamos el mes correspondiente a la centralización que queremos enviar al servidor</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-10">
+                    <ul>
+                        <li class="color-titulo">Seleccionamos los tres puntos para abrir las opciones</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-10">
+                    <ul>
+                        <li class="color-titulo">Seleccionamos Enviar contabilidad. Aquí comenzara el proceso del envio, solo debemos esperar.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-10">
+                    <ul>
+                        <li class="color-titulo">Aquí podemos ver en la parte superior derecha como va el estado del envió</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-10">
+                    <ul>
+                        <li class="color-titulo">Ya podemos ver en la parte superior derecha el mensaje de éxito!</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-10">
+                    <ul>
+                        <li class="color-titulo">Volvemos a FileZilla y damos clic en el bóton actualizar.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-10">
+                    <ul>
+                        <li class="color-titulo">Aquí ya podremos ver que el archivo se encuentra alojado en nuestro servidor.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-7">
+                    <p class="color-titulo">Si aún te encuentras con dudas, puedes escribirnos en nuestro canal de slack haciendo clic en el icono o también puedes revisar nuestra documentación en el logo de google drive</p>
+                </div>
+                <div class="col-md-2">
+                 <a href="https://drive.google.com/drive/folders/1RICP_5A7W_WDy1KL86KZnCSlkFER5NKP?usp=sharing" target="_blank"><img src="img/logo_drive.png" width="80" height="70">
+                 </a>
+                </div>
+                <div class="col-md-3">
+                 <a href="https://bukhr.slack.com/archives/C02CDULLYN9" target="_blank"><img src="img/logo_slack.png" width="100" height="70">
+                 </a>
+                </div>
+               
+            </div>
+            <footer class="bg-light text-center py-3 mt-5 d-flex justify-content-center">
+                <img src="img/integraciones_by_buk.png" alt="Footer Image" height="100" class="mx-3"></img>
+            </footer>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .pagina-imagen {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h5 class="color-titulo text-center">Creación de token y conexión</h5>
+        <!-- <p>Estás en la página {indiceActual} de la presentación.</p>-->
+
+        &nbsp;
+
+        <div class="container">
+            <!-- Primera fila con imagen y descripción -->
+            <div class="row pagina-imagen">
+                <div class="col-md-3">
+                    <p class="color-titulo"><strong>Administración</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-9">
+                    <ul>
+                        <li class="color-titulo">Debes hacer clic para acceder a los ajustes de la plataforma.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row pagina-imagen">
+                <div class="col-md-4">
+                    <input data-word-filter="" data-target-node=".opciones-administracion"
+                        data-target-text=".info-title" class="form-control" type="search" placeholder="Buscar"
+                        autocomplete="off" disabled>
+                </div>
+                <div class="col-md-6">
+                    <p class="color-titulo">Debes ingresar la palabra Accesos API para encontrar la configuración
+                        correcta.</p>
+                </div>
+            </div>
+
+            <div class="row pagina-imagen">
+                <div class="col-md-3">
+                    <img src="img/logo_acceso_api.png" width="40"> Accesos API
+                </div>
+                <div class="col-md-6">
+                    <p class="color-titulo">Haz clic aquí para ingresar a la creación del token</p>
+                </div>
+            </div>
+
+            <div class="row pagina-imagen">
+                <div class="col-md-2">
+                    <img src="img/ojo_token.png" width="40">
+                </div>
+                <div class="col-md-9">
+                    <p class="color-titulo">Damos clic en el icono del ojo para que el token sea desbloqueado y poder
+                        copiarlo.</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-4">
+                    <input type="text" id="miInput" value="">
+                </div>
+                <div class="col-md-8">
+                    <p class="color-titulo">Copiamos el texto y lo llevaremos a la pagina de apidocs. Ha esta pagina
+                        llegamos ingresando la palabra apidocs en la url del cliente ejemplo: demo.buk.cl/apidocs.</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-2">
+                    <button class="btn btn-primary btn-md" data-modal="true" href="">Autorizar</button>
+                </div>
+                <div class="col-md-9">
+                    <p class="color-titulo">Debemos hacer clic en Autorizar para que ingresemos nuestro token copiado
+                        anteriormente.</p>
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                        <li class="color-titulo">Debemos ver que el país este correcto</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-4">
+                    <input type="text" id="miInput" value="">
+                </div>
+                <div class="col-md-6">
+                    <p class="color-titulo">Pegamos nuestro token creado.</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-2">
+                    <button type="button" class="auth__button auth_submit__button"
+                        data-sw-translate="">Authorize</button>
+                </div>
+                <div class="col-md-6">
+                    <p class="color-titulo">Hacemos clic en Authorize</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-3">
+                    <p class="color-titulo"><strong>Empleados</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-9">
+                    <ul>
+                        <li class="color-titulo">Vamos a seleccionar la opción y aquí encontraremos cada uno de los
+                            endpoint que se encuentran disponibles en la categoria empleados.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                </p>
+                <div class="col-md-3">
+                    <p class="color-titulo"><strong>/employees/{id}</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-9">
+                    <ul>
+                        <li class="color-titulo">En este caso probaremos con este endpoint que es para traer los datos
+                            de un colaborador en especifico</li>
+                    </ul>
+                </div><br><br>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                <p class="color-titulo text-center"><strong>Que significa post, get, delete y patch?</strong></p>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <table class="table table-hover">
+                                <tr>
+                                    <td class="color-titulo"><strong>GET</strong></td>
+                                    <td class="color-titulo">Los metodos <strong>GET</strong> sirven para obtener datos
+                                        del servidor ejemplo, consultar todos los empleados, consultas algún empleado
+                                        especifico, consultas vacaciones, etc</td>
+                                </tr>
+                                <tr>
+                                    <td class="color-titulo"><strong>POST</strong></td>
+                                    <td class="color-titulo">Los metodos <strong>POST</strong> sirven para enviar datos
+                                        al servidor y crear un recurso ejemplo, crear empleados, licencia, inasitencia,
+                                        items,etc</td>
+                                </tr>
+                                <tr>
+                                    <td class="color-titulo"><strong>PATCH</strong></td>
+                                    <td class="color-titulo">Los metodos <strong>PATCH</strong> sirven para aplicar
+                                        modificaciones parciales a un recurso existente ejemplo, modificar la dirección
+                                        a un colaborador existente, modificar los días a una licencia anteriormente
+                                        creada en la plataforma,etc </td>
+                                </tr>
+                                <tr>
+                                    <td class="color-titulo"><strong>DELETE</strong></td>
+                                    <td class="color-titulo">Los metodos <strong>DELETE</strong> sirven para solicitar
+                                        al servidor eliminar un recurso ejemplo, eliminar un colaborador, eliminar una
+                                        licencia, etc</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-9">
+                    <ul>
+                        <li class="color-titulo">Ahora debemos ingresar el parametro que nos solicita el metodo, puede ser el rut sin puntos ni guión o el id del colaborador que buscaremos.</li>
+                    </ul>
+                    <ul>
+                        <li class="color-titulo">Por último, presionamos el bóton Pruébalo!</li>
+                    </ul>
+                </div>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                <p class="color-titulo text-center"><strong>Información</strong></p>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <table class="table table-hover">
+                                <tr>
+                                    <td class="color-titulo"><strong>1</strong></td>
+                                    <td class="color-titulo"><strong>URL: </strong>Corresponde al endpoint que vamos a utilizar para nuestra consulta y que tipo es, en este caso es un metodo <strong>GET</strong></td>
+                                </tr>
+                                <tr>
+                                    <td class="color-titulo"><strong>2</strong></td>
+                                    <td class="color-titulo"><strong>Clase de la respuesta: </strong>Nos indica el código de respuesta que debemos recibir si la consulta se logra con exito!. Si no recibimos el código 200, es por que tenemos un inconveniente y pueden ser:<br> - Dato no encontrado<br> - Se acabo el tiempo de espera<br> - Error de código interno </td>
+                                </tr>
+                                <tr>
+                                    <td class="color-titulo"><strong>3</strong></td>
+                                    <td class="color-titulo"> <strong>Valor Ejemplo/ modelo</strong>Aquí veremos un ejemplo del JSON (formato de dato) que nos retornara el sistema. Si damos click en donde dice modelo, podremos ver cada uno de los atributos (datos que componen el json) y veremos de que tipo es, si es un entero (integer), texto (string), verdadero o falso (boolean), objeto (empleado, licencia, etc).</td>
+                                </tr>
+                                <tr>
+                                    <td class="color-titulo"><strong>4</strong></td>
+                                    <td class="color-titulo"><strong>Párametros</strong> Veremos los datos que podemos ingresar en nuestro endpoint, en algunos casos tendremos más o menos, dependera del endpoint a utilizar. No todos los parametros son obligatorio, dependera de la documentación.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-9">
+                    <ul>
+                        <li class="color-titulo">Luego de enviar nuestra petición haciendo clic en el bóton Pruébalo! recibiremos la respuesta en formato json.</li>
+                    </ul>
+                    <ul>
+                        <li class="color-titulo">Ahora es momento de realizar este proceso, desde la herramienta Postman.</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.postman.com/downloads/"
+                        target="_blank"><img src="img/logo_postman.png" style="width: 100px; height: auto; margin-right: 10px;">
+                    </a>
+                </div>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                <p class="color-titulo text-center"><strong>Información</strong></p>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <table class="table table-hover">
+                                <tr>
+                                    <td class="color-titulo"><strong>1</strong></td>
+                                    <td class="color-titulo"><strong>Curl: </strong> Es una herramienta de línea de comandos que te ayuda a descargar o enviar datos desde y hacia servidores</td>
+                                </tr>
+                                <tr>
+                                    <td class="color-titulo"><strong>2</strong></td>
+                                    <td class="color-titulo"><strong>La URL de solicitud: </strong> Es la dirección exacta del endpoint dentro del servidor que nos va a permitir realizar acciones específicas, como obtener información, crear, actualizar o eliminar dato. </td>
+                                </tr>
+                                <tr>
+                                    <td class="color-titulo"><strong>3</strong></td>
+                                    <td class="color-titulo"> <strong>Cuerpo de la respuesta: </strong>Aquí tendremos los datos recibidos desde el servidor en formato JSON</td>
+                                </tr>
+                                <tr>
+                                    <td class="color-titulo"><strong>4</strong></td>
+                                    <td class="color-titulo"><strong>Código de la respuesta: </strong> Nos indica mediante un código el exito! de nuestra consulta o el error en su defecto.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-2">
+                    <p class="color-titulo"><strong>New</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-9">
+                    <p class="color-titulo">Una vez abierta la herramienta Postman, daremos clic en New para crear una conexión.</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-2">
+                    <p class="color-titulo"><strong>HTTP</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-9">
+                    <p class="color-titulo">Seleccionamos HTTP que es el protocolo que nos sirve para utilizar la API.</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-9">
+                    <ul>
+                        <li class="color-titulo">Volvemos a la apidocs y copiamos <strong>URL de la solicitud</strong> para poder pegarla en Postman</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-2">
+                    <p class="color-titulo"><strong>1</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-10">
+                    <p class="color-titulo">Aquí debemos pegar la URL copiada anteriormente en la pagina de apidocs</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="color-titulo"><strong>2</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-10">
+                    <p class="color-titulo">Veremos que en este punto (Query Params) habilita una <strong>key</strong> llamada rut con un <strong>value</strong>. Este valor corresponde en este caso al rut del colaborador, esto pasa por que la url que nosotros copiamos en el paso 1, tiene como parametro el rut que consultamos en la apidocs y Postman lo respresenta de esta manera</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="color-titulo"><strong>Headers</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-10">
+                    <p class="color-titulo">Ahora debemos hacer clic en Headers para poder entregarle nuestro token y así tener los permisos necesarios al momento de realizar la consulta desde Postman.</p>
+                </div>
+            </div>
+
+            <div class="row pagina-imagen">
+                <div class="col-md-2">
+                    <p class="color-titulo"><strong>1</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-10">
+                    <p class="color-titulo">Aquí vamos a crear nuestro parametro a diferencia de la imagen anterior, donde con solo pegar la url se nos creo el parametro ahora debemos crearlo nosotros. En Key escribimos auth_token y en value pegamos el token que copiamos desde BUK al comienzo del manual.</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="color-titulo"><strong>Send</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-10">
+                    <p class="color-titulo">Ya realizado lo anterior, hacemos clic en el bóton Send</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-2">
+                    <p class="color-titulo"><strong>1</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-10">
+                    <p class="color-titulo">Aquí veremos el JSON con la información obtenida desde la API de BUK</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="color-titulo"><strong>2</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-10">
+                    <p class="color-titulo">Postman nos muestra el código de respuesa 200 al igual como lo vimos en imagenes anteriores desde la apidocs. Recordar que el código 200 es un mensaje de Exito!</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-7">
+                    <p class="color-titulo">Si aún te encuentras con dudas, puedes escribirnos en nuestro canal de slack
+                        haciendo clic en el icono o también puedes revisar nuestra documentación en el logo de google
+                        drive</p>
+                </div>
+                <div class="col-md-2">
+                    <a href="https://drive.google.com/drive/folders/1hrm2aauHQuzvFKk85kxDhfVK_Blg5DS9?usp=sharing"
+                        target="_blank"><img src="img/logo_drive.png" width="80" height="70">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://bukhr.slack.com/archives/C02CDULLYN9" target="_blank"><img src="img/logo_slack.png"
+                            width="100" height="70">
+                    </a>
+                </div>
+
+            </div>
+            <footer class="bg-light text-center py-3 mt-5 d-flex justify-content-center">
+                <img src="img/integraciones_by_buk.png" alt="Footer Image" height="100" class="mx-3"></img>
+            </footer>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

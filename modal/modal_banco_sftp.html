@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .pagina-imagen {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h5 class="color-titulo text-center">Envio de Banco por SFTP</h5>
+        <!-- <p>Estás en la página {indiceActual} de la presentación.</p>-->
+
+        &nbsp;
+
+        <div class="container">
+            <!-- Primera fila con imagen y descripción -->
+            <div class="row pagina-imagen">
+                <div class="col-md-3">
+                    <p class="color-titulo"><strong>Administración</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-9">
+                    <ul>
+                        <li class="color-titulo">Debes hacer clic para acceder a los ajustes de la plataforma.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-4">
+                    <p class="color-titulo"><strong>Parámetros Generales</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-8">
+                    <ul>
+                        <li class="color-titulo">Aquí encontraremos todas las configuraciones que nos entrega la plataforma.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-4">
+                    <input data-word-filter="" data-target-node=".opciones-administracion"
+                        data-target-text=".info-title" class="form-control" type="search" placeholder="Buscar"
+                        autocomplete="off" disabled>
+                </div>
+                <div class="col-md-6">
+                    <p class="color-titulo">Debes ingresar la palabra <strong>Banco</strong> para encontrar la configuración correcta.</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-6">
+                    <p class="color-titulo"><strong>Integrar Envío de archivos de Bancos</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-5">
+                    <ul>
+                        <li class="color-titulo">Activamos la configuración.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-2">
+                    <button class="btn btn-primary btn-md" data-modal="true" href="">Guardar</button>
+                </div>
+                <div class="col-md-8">
+                    <p class="color-titulo">Luego de activa la opción, daremos clic en el botón guardar.</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-3">
+                    <p class="color-titulo"><strong>Administración</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-9">
+                    <ul>
+                        <li class="color-titulo">Debes hacer clic para acceder a los ajustes de la plataforma.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-3">
+                    <input data-word-filter="" data-target-node=".opciones-administracion"
+                        data-target-text=".info-title" class="form-control" type="search" placeholder="Buscar"
+                        autocomplete="off" disabled>
+                </div>
+                <div class="col-md-8">
+                    <p class="color-titulo">Debes ingresar la palabra <strong>Integraciones</strong> para encontrar la configuración correcta y seleccionamos <strong>Integraciones</strong></p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-4">
+                    <p class="color-titulo"><strong>Envío de archivos de Bancos</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-7">
+                    <ul>
+                        <li class="color-titulo">Aquí seleccionamos esta opción para comenzar con la configuración</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-3">
+                    <p class="color-titulo"><strong>Seleccionar Empresa</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-8">
+                    <ul>
+                        <li class="color-titulo">La configuración debes realizarla por empresa, en este caso solo figura una empresa.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <table class="table table-hover">
+                        <tr>
+                            <td class="color-titulo"><strong>Bacup URL</strong></td>
+                            <td class="color-titulo">Debes especificar si tu servidor es SFTP o FTP y agregar tu url compuesta por el tipo de servidor, usuario, dirección ip o dns y por último el puerto de conexión, ejemplo: sftp://usuario@127.0.0.1:22</td>
+                        </tr>
+                        <tr>
+                            <td class="color-titulo"><strong>Backup Password</strong></td>
+                            <td class="color-titulo">Aquí debes ingresar la contraseña de tu servidor</td>
+                        </tr>
+                        <tr>
+                            <td class="color-titulo"><strong>Backup Path</strong></td>
+                            <td class="color-titulo">Esta ruta hace referencia en donde sera almacenado el archivo en tu servidor Ej ('/etc/tmp/')</td>
+                        </tr>
+                        <tr>
+                            <td class="color-titulo"><strong>Encriptación Activa</strong></td>
+                            <td class="color-titulo">Si necesita que tu archivo viaje encriptado, debes activar esta casilla</td>
+                        </tr>
+                        <tr>
+                            <td class="color-titulo"><strong>Llave Pública</strong></td>
+                            <td class="color-titulo">Las llaves SSH o publicas se usan para autenticación en servidores remotos. Si utilizas SSH, no es necesaria la contraseña</td>
+                        </tr>
+                        <tr>
+                            <td class="color-titulo"><strong>Recipiente de la llave pública (opcional)</strong></td>
+                            <td class="color-titulo">Es un correo de respaldo o identificador del dueño de la Llave publica</td>
+                        </tr>
+                </table>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-2">
+                    <button class="btn btn-primary btn-md" data-modal="true" href="">Guardar</button>
+                </div>
+                <div class="col-md-8">
+                    <p class="color-titulo">Luego de configurar cada uno de los campos solicitados, daremos clic en el botón guardar.</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-2">
+                    <img src="img/buk.png" width="60">
+                </div>
+                <div class="col-md-6">
+                    <p class="color-titulo">Damos clic en el logo de BUK.</p>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-3">
+                    <p class="color-titulo"><strong>Seleccionar Mes</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-8">
+                    <ul>
+                        <li class="color-titulo">Seleccionamos el mes correspondiente al archivo de banco que queremos enviar al servidor</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-1">
+                    <img src="img/tres_puntos.png" width="20">
+                </div>
+                <div class="col-md-8">
+                        <p class="color-titulo">Seleccionamos los tres puntos para abrir las opciones</p>
+
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-3">
+                    <p class="color-titulo"><strong>Enviar banco</strong></p>
+                    </button>
+                </div>
+                <div class="col-md-8">
+                    <ul>
+                        <li class="color-titulo">Una vez que hagamos clic comenzara el proceso, solo debemos esperar.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-10">
+                    <ul>
+                        <li class="color-titulo">Aquí podemos ver en la parte superior derecha como va el estado del envió</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-10">
+                    <ul>
+                        <li class="color-titulo">Ya podemos ver en la parte superior derecha el mensaje de éxito!</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pagina-imagen">
+                <div class="col-md-7">
+                    <p class="color-titulo">Si aún te encuentras con dudas, puedes escribirnos en nuestro canal de slack haciendo clic en el icono o también puedes revisar nuestra documentación en el logo de google drive</p>
+                </div>
+                <div class="col-md-2">
+                 <a href="https://drive.google.com/drive/folders/1RICP_5A7W_WDy1KL86KZnCSlkFER5NKP?usp=sharing" target="_blank"><img src="img/logo_drive.png" width="80" height="70">
+                 </a>
+                </div>
+                <div class="col-md-3">
+                 <a href="https://bukhr.slack.com/archives/C02CDULLYN9" target="_blank"><img src="img/logo_slack.png" width="100" height="70">
+                 </a>
+                </div>
+               
+            </div>
+            <footer class="bg-light text-center py-3 mt-5 d-flex justify-content-center">
+                <img src="img/integraciones_by_buk.png" alt="Footer Image" height="100" class="mx-3"></img>
+            </footer>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

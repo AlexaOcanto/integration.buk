@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual</title> <!-- Título genérico -->
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://dxcgedrrxtox6.cloudfront.net/packs/media/images/favicon/favicon-49190247a05bcd656012c4853c14c8e1.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Font Awesome -->
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="btn custom-reset-btn" href="#" id="resetManualButton">
+                <i class="fas fa-sync-alt"></i> Reiniciar
+            </a> <!-- Botón personalizado para reiniciar -->
+            
+            <!-- Reubicación del botón para ver imágenes pasadas con el contador de página dentro -->
+            <button id="viewPreviousButton" class="btn custom-reset-btn ms-3">
+                <i class="fas fa-bars"></i>
+                <p id="pageCounter" class="page-counter" style="display: inline-block; margin-left: 20px; color: #ffffff;">Página 1/1</p>
+            </button>
+        
+            <button id="instruccionesButton" class="btn custom-btn ms-2">
+                <i class="fas fa-info-circle"></i> Ayuda en este Paso
+            </button> <!-- Botón personalizado para ver instrucciones -->
+        </div>
+        
+    </nav>
+    <div class="container my-3 text-center">
+        <h2 style='color: #2f4daa;' id="manualTitle">Título del Manual</h2>
+        <p style='color: #2f4daa;' id="manualDescription">Descripción del Manual</p>
+
+        <div id="manualImages" class="text-center position-relative">
+            <img id="currentImage" src="" class="img-fluid mb-3" alt="Imagen del manual">
+            <!-- Botón resaltado para hacer clic y avanzar -->
+            <button id="highlightButton" class="highlight-btn"></button>
+        </div>
+        <!-- Contenedor del logo justo antes del footer -->
+        <div class="logo-container">
+            <img src="img/buk_trabajo_feliz.png" alt="Logo" class="logo-footerManual">
+        </div>
+    </div>
+
+    <!-- Modal para seleccionar imágenes previas -->
+<div class="modal fade" id="previousImagesModal" tabindex="-1" aria-labelledby="previousImagesModalLabel"
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+        <!-- Header del Modal personalizado (igual que el de instrucciones) -->
+        <div class="modal-header custom-modal-header">
+            <h5 class="modal-title" id="previousImagesModalLabel">Selecciona una imagen</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+
+        <!-- Cuerpo del Modal -->
+        <div class="modal-body">
+            <!-- Contenedor scrollable para imágenes previas -->
+            <div class="row" id="previousImagesContainer" style="max-height: 400px; overflow-y: auto;">
+                <!-- Aquí se insertarán dinámicamente las imágenes previas -->
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+    <!-- Modal para mostrar la información importante -->
+    <div class="modal fade" id="importanteModal" tabindex="-1" aria-labelledby="importanteModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="importanteModalLabel">Información Importante</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="importanteMessage">Aquí se mostrará la información importante para el usuario.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">He leído y entiendo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para las instrucciones -->
+    <div class="modal fade" id="instruccionesModal" tabindex="-1" aria-labelledby="instruccionesModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+
+                <!-- Header del Modal -->
+                <div class="modal-header custom-modal-header">
+                    <h5 class="modal-title" id="instruccionesModalLabel">Detalles de este Paso</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+
+                <!-- Cuerpo del Modal -->
+                <div class="modal-body">
+
+                    <!-- Sección 1: Instrucciones o detalles sobre qué hacer en esta imagen -->
+                    <section id="modalInstruccionesBody">
+                        <h6>Instrucciones</h6>
+                        <p>Aquí se mostrarán los detalles sobre qué debe hacer el usuario en esta imagen.</p>
+                    </section>
+                </div>
+                <!-- Sección 2: Enlaces a documentación -->
+                <hr>
+                <section id="documentacionEnlaces">
+
+                    <!-- Aquí se mostrarán los enlaces a la documentación de manera dinámica -->
+                </section>
+
+                <!-- Footer del Modal -->
+                <div class="modal-footer custom-modal-header">
+                    <p>¿Tienes más dudas? Consulta en
+                        <a href="https://mail.google.com/chat/u/0/#chat/space/AAAAN6rQig0" target="_blank">
+                            <img src="https://ssl.gstatic.com/ui/v1/icons/mail/chatlogo/logo_chat_dark_1x.png"
+                                alt="Google Chat"
+                                style="width: 80px; height: 40px; vertical-align: middle; margin-left: 10px;">
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Carga data.js y el script para el manejo del manual -->
+    <script src="data.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const manualId = urlParams.get('id');
+
+        // Encontrar el manual correspondiente
+        const manual = manuales.find(manual => manual.url.includes(manualId));
+
+        let currentImageIndex = 0;
+        let viewedImages = []; // Para almacenar las imágenes vistas
+
+        if (manual) {
+            document.getElementById('manualTitle').textContent = manual.nombre;
+            document.getElementById('manualDescription').innerHTML = manual.descripcion;
+
+            // Cambiar el título de la pestaña con el nombre del manual
+            document.title = manual.nombre;
+
+            const currentImageElement = document.getElementById('currentImage');
+            const highlightButton = document.getElementById('highlightButton');
+            const instruccionesButton = document.getElementById('instruccionesButton');
+            const modalInstruccionesBody = document.getElementById('modalInstruccionesBody');
+
+            // Verificar si existe información importante en el manual
+            if (manual.importante && manual.importante.trim() !== "") {
+                document.getElementById('importanteMessage').innerHTML = manual.importante;
+                const importanteModal = new bootstrap.Modal(document.getElementById('importanteModal'));
+                importanteModal.show();
+            }
+
+            // Función para actualizar la imagen y el botón resaltado
+            function updateImageAndHighlight() {
+                // Verificar si la imagen actual ya está en la lista de imágenes vistas
+                const isImageAlreadyViewed = viewedImages.some(image => image.index === currentImageIndex);
+
+                // Solo agregar la imagen actual si no está ya en la lista de imágenes vistas
+                if (!isImageAlreadyViewed) {
+                    viewedImages.push({ src: manual.imagenes[currentImageIndex], index: currentImageIndex });
+                }
+
+                // Actualizar la imagen principal
+                currentImageElement.src = manual.imagenes[currentImageIndex];
+                const details = manual.highlightDetails[currentImageIndex];
+
+                // Ocultar el botón inicialmente
+                highlightButton.style.display = 'none'; // Asegura que el botón esté oculto al principio
+
+                // Posicionar y definir el tamaño del botón (incluso si está oculto)
+                highlightButton.style.left = details.x + 'px';
+                highlightButton.style.top = details.y + 'px';
+                highlightButton.style.width = details.width + 'px';
+                highlightButton.style.height = details.height + 'px';
+
+                // Agregar un retraso de 1 segundo para mostrar el botón resaltado
+                setTimeout(() => {
+                    highlightButton.style.display = 'block'; // Mostrar el botón después del retraso
+                }, 1000); // 1000 milisegundos = 1 segundo
+
+                // Actualizar las instrucciones en el modal
+                modalInstruccionesBody.textContent = manual.instrucciones[currentImageIndex];
+                document.getElementById('pageCounter').textContent = `Página ${currentImageIndex + 1}/${manual.imagenes.length}`;
+            }
+
+            // Inicializa mostrando la primera imagen
+            updateImageAndHighlight();
+
+            // Avanzar a la siguiente imagen al hacer clic en el botón resaltado
+            highlightButton.addEventListener('click', () => {
+                currentImageIndex = (currentImageIndex + 1) % manual.imagenes.length;  // Ciclo circular de imágenes
+                updateImageAndHighlight();
+            });
+
+            // Mostrar instrucciones al hacer clic en el botón
+            instruccionesButton.addEventListener('click', () => {
+                const instruccionesModal = new bootstrap.Modal(document.getElementById('instruccionesModal'));
+                updateModalContent(manual);
+                instruccionesModal.show();
+            });
+
+            // Botón para reiniciar el manual
+            document.getElementById('resetManualButton').addEventListener('click', (e) => {
+                e.preventDefault(); // Evitar comportamiento predeterminado de enlaces
+                currentImageIndex = 0; // Reinicia al primer índice
+                updateImageAndHighlight(); // Muestra la primera imagen
+            });
+
+            // Nuevo: Botón para abrir el modal con imágenes previas
+            document.getElementById('viewPreviousButton').addEventListener('click', () => {
+                const previousImagesModal = new bootstrap.Modal(document.getElementById('previousImagesModal'));
+                showPreviousImages();
+                previousImagesModal.show();
+            });
+
+            // Función para mostrar las imágenes previas en el modal
+            function showPreviousImages() {
+                const container = document.getElementById('previousImagesContainer');
+                container.innerHTML = '';
+
+                // Solo mostrar las imágenes hasta la actual (excluyendo la imagen actual)
+                const filteredImages = viewedImages.filter(image => image.index < currentImageIndex);
+
+                filteredImages.forEach((image, index) => {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = image.src;
+                    imgElement.classList.add('img-thumbnail', 'col-12', 'mb-3');
+                    imgElement.style.cursor = 'pointer';
+
+                    const caption = document.createElement('p');
+                    caption.textContent = `Página ${image.index + 1}`; // Añadir número de página
+                    caption.style.fontSize = '1rem';
+                    caption.style.textAlign = 'center';
+
+                    const imgContainer = document.createElement('div');
+                    imgContainer.classList.add('col-md-12');
+                    imgContainer.appendChild(imgElement);
+                    imgContainer.appendChild(caption);
+
+                    // Añadir evento para seleccionar la imagen
+                    imgElement.addEventListener('click', () => {
+                        currentImageIndex = image.index;
+                        updateImageAndHighlight();
+                        viewedImages = viewedImages.filter(img => img.index <= currentImageIndex); // Actualizar las imágenes vistas
+                        const previousImagesModal = bootstrap.Modal.getInstance(document.getElementById('previousImagesModal'));
+                        previousImagesModal.hide(); // Cerrar el modal al seleccionar la imagen
+                    });
+
+                    container.appendChild(imgContainer);
+                });
+            }
+
+        } else {
+            document.getElementById('manualTitle').textContent = 'Manual no encontrado';
+            document.getElementById('manualDescription').textContent = 'No se pudo encontrar el manual seleccionado.';
+        }
+
+        // Parpadeo al hacer clic en cualquier parte de la página
+        document.addEventListener('click', (e) => {
+            const highlightButton = document.getElementById('highlightButton');
+
+            // Asegúrate de que no se active cuando hagas clic en el botón resaltado
+            if (!highlightButton.contains(e.target)) {
+                highlightButton.classList.add('blinking'); // Añade la clase de parpadeo
+                setTimeout(() => {
+                    highlightButton.classList.remove('blinking'); // Elimina la clase después de la animación
+                }, 1500); // Tiempo de duración de la animación (0.5s * 3)
+            }
+        });
+
+        function updateModalContent(manual) {
+            const index = currentImageIndex || 0;
+
+            // Verifica que haya instrucciones y que el índice no esté fuera de los límites
+            if (manual.instrucciones && manual.instrucciones.length > index) {
+                document.getElementById('modalInstruccionesBody').innerHTML = `<p>${manual.instrucciones[index]}</p>`;
+            } else {
+                document.getElementById('modalInstruccionesBody').innerHTML = '<p>No hay instrucciones disponibles para esta imagen.</p>';
+            }
+
+            // Actualiza los enlaces de documentación
+            const documentacionEnlaces = document.getElementById('documentacionEnlaces');
+            if (manual.enlacesDocumentacion && manual.enlacesDocumentacion.length > 0) {
+                let enlacesHtml = `
+                <h5 class="text-center my-4" style="color: #2f4daa; font-weight: bold; font-size: 1.3rem;">Documentación</h5>
+                <div class="d-flex justify-content-center flex-wrap">`; // Contenedor centrado y flexible
+                manual.enlacesDocumentacion.forEach(enlace => {
+                    enlacesHtml += `
+                    <div class="card text-center m-2 shadow-sm" style="width: 17rem; height: 8rem;">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                            <i class="fas fa-file-alt fa-3x mb-2 text-primary"></i> <!-- Ícono de archivo -->
+                            <p class="card-text" style="font-size: 0.8rem;">
+                                <a href="${enlace.url}" target="_blank" class="text-decoration-none text-primary">
+                                    ${enlace.nombre}
+                                </a>
+                            </p>
+                        </div>
+                    </div>`;
+                });
+                enlacesHtml += '</div>';
+                documentacionEnlaces.innerHTML = enlacesHtml;
+            } else {
+                //documentacionEnlaces.innerHTML = '<p class="text-center">No hay documentación relacionada disponible.</p>';
+            }
+        }
+    </script>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
