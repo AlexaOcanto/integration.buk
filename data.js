@@ -372,7 +372,6 @@ const manuales = [
   "tipo": "BUK", 
   "nombre": "Monitoreo de LOG SFTP", 
   "fecha": "21-11-2024",
-  "importante":"",
   "descripcion": "Este manual explica paso a paso cómo activar y revisar los registros de LOG al usar SFTP. Ideal para garantizar un monitoreo efectivo, resolver problemas y mantener un control detallado de las transferencias de archivos.", 
   "url": "manual.html?id=log_sftp",
   "activo": true, 
@@ -787,7 +786,13 @@ const manuales = [
   "tipo": "SSO", 
   "nombre": "Guía para configurar SAML con el Proveedor de Autenticación Microsoft Entra", 
   "fecha": "20-01-2025",
-  "importante":"",
+  "importante": "Si has llegado a esta sección, debiste haber enviado al cliente el <strong>Identifier</strong> y el <strong>ACS</strong> para generar el XML necesario para la configuración.<br><br> \
+      Las URLs se generan a partir de la URL del cliente. Por ejemplo, si la URL del cliente es <strong>buk.buk.cl</strong>, entonces el <strong>ACS</strong> y el <strong>Identifier</strong> serán los siguientes:</br></br> \
+       <strong>ACS:</strong> https://buk.buk.cl/users/saml/auth </br></br> \
+       <strong>Identifier:</strong> https://buk.buk.cl/users/saml/metadata </br></br> \
+       Estos dos parámetros son fundamentales, ya que el cliente debe ingresarlos en su proveedor de identidad al momento de crear la aplicación.<br><br> \
+       Una vez creada la aplicación, el cliente podrá descargar un archivo XML desde su proveedor.<br><br> \
+       Es crucial que el colaborador con el cual se realizará la prueba exista tanto en <strong>BUK</strong> como en la aplicación creada en el proveedor de identidad.",
   "descripcion": "Este manual te guiará paso a paso en la configuración de SAML en el Proveedor de Autenticación Microsoft Entra", 
   "url": "manual.html?id=saml_microsoft",
   "activo": true, 
@@ -928,7 +933,13 @@ const manuales = [
   "tipo": "SSO", 
   "nombre": "Guía para configurar SAML con el Proveedor de Autenticación Google Workspace", 
   "fecha": "24-2-2025",
-  "importante":"",
+  "importante": "Si has llegado a esta sección, debiste haber enviado al cliente el <strong>Identifier</strong> y el <strong>ACS</strong> para generar el XML necesario para la configuración.<br><br> \
+      Las URLs se generan a partir de la URL del cliente. Por ejemplo, si la URL del cliente es <strong>buk.buk.cl</strong>, entonces el <strong>ACS</strong> y el <strong>Identifier</strong> serán los siguientes:</br></br> \
+       <strong>ACS:</strong> https://buk.buk.cl/users/saml/auth </br></br> \
+       <strong>Identifier:</strong> https://buk.buk.cl/users/saml/metadata </br></br> \
+       Estos dos parámetros son fundamentales, ya que el cliente debe ingresarlos en su proveedor de identidad al momento de crear la aplicación.<br><br> \
+       Una vez creada la aplicación, el cliente podrá descargar un archivo XML desde su proveedor.<br><br> \
+       Es crucial que el colaborador con el cual se realizará la prueba exista tanto en <strong>BUK</strong> como en la aplicación creada en el proveedor de identidad.",
   "descripcion": "Este manual te guiará paso a paso en la configuración de SAML en el Proveedor de Autenticación de Google Workspace.", 
   "url": "manual.html?id=saml_google",
   "activo": true, 
